@@ -1,5 +1,6 @@
 import { Router } from "express";
 
+import { authenticationsRoutes } from "./authentication.routes";
 import { categoriesRoutes } from "./categories.routes";
 import { specificationsRoutes } from "./specification.routes";
 import { usersRoutes } from "./users.routes";
@@ -11,5 +12,7 @@ router.use("/categories", categoriesRoutes);
 router.use("/specifications", specificationsRoutes);
 
 router.use("/users", usersRoutes);
+
+router.use(authenticationsRoutes);
 
 export { router };
