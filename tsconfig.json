@@ -19,7 +19,7 @@
         "utils/*"
       ],
       "@errors/*": [
-        "errors/*"
+        "shared/errors/*"
       ]
     },
     "esModuleInterop": true,

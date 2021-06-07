@@ -1,9 +1,8 @@
+import { CreateCategoryController } from "@modules/cars/useCases/CreateCategory/CreateCagetoryController";
+import { ImportCategoryController } from "@modules/cars/useCases/ImportCategory/ImportCategoryController";
+import { ListCategoriesController } from "@modules/cars/useCases/ListCategory/ListCategoriesController";
 import { Router } from "express";
 import multer from "multer";
-
-import { CreateCategoryController } from "../modules/cars/useCases/CreateCategory/CreateCagetoryController";
-import { ImportCategoryController } from "../modules/cars/useCases/ImportCategory/ImportCategoryController";
-import { ListCategoriesController } from "../modules/cars/useCases/ListCategory/ListCategoriesController";
 
 const categoriesRoutes = Router();
 const upload = multer({

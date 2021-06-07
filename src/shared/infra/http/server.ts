@@ -1,15 +1,16 @@
 import "reflect-metadata";
+
 import cors from "cors";
 import express, { NextFunction, Request, Response } from "express";
 import "express-async-errors";
 import swaggerUi from "swagger-ui-express";
 
-import { AppError } from "./errors/AppError";
-import { router } from "./routes";
-import swaggerFile from "./swagger.json";
-import "./database";
-import "./shared/container";
+import { AppError } from "@shared/errors/AppError";
+import { router } from "@shared/infra/http/routes";
 
+import swaggerFile from "../../../swagger.json";
+import "../typeorm";
+import "@shared/container";
 
 const app = express();
 const port = 3333;

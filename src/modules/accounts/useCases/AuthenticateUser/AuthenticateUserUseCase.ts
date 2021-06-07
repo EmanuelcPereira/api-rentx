@@ -1,7 +1,8 @@
-import { AppError } from "@errors/AppError";
 import { compare } from "bcrypt";
 import { sign } from "jsonwebtoken";
 import { injectable, inject } from "tsyringe";
+
+import { AppError } from "@shared/errors/AppError";
 
 import { IUsersRepository } from "../../repositories/IUsersRepository";
 

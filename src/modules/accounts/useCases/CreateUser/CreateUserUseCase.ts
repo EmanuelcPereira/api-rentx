@@ -1,6 +1,7 @@
-import { AppError } from "@errors/AppError";
 import { hash } from "bcrypt";
 import { injectable, inject } from "tsyringe";
+
+import { AppError } from "@shared/errors/AppError";
 
 import { ICreateUserDTO } from "../../dtos/ICreateUserDto";
 import { IUsersRepository } from "../../repositories/IUsersRepository";

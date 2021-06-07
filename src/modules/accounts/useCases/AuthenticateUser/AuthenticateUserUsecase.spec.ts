@@ -1,4 +1,4 @@
-import { AppError } from "@errors/AppError";
+import { AppError } from "@shared/errors/AppError";
 
 import { UsersRepositoryInMemory } from "../../repositories/In-Memory/UsersRepositoryInMemory";
 import { CreateUserUseCase } from "../CreateUser/CreateUserUseCase";
