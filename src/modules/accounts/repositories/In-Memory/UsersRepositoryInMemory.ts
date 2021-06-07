@@ -1,7 +1,7 @@
+import { User } from "@modules/accounts/infra/typeorm/entities/User";
 import { v4 as uuid } from "uuid";
 
 import { ICreateUserDTO } from "../../dtos/ICreateUserDto";
-import { User } from "../../infra/typeorm/entities/User";
 import { IUsersRepository } from "../IUsersRepository";
 
 class UsersRepositoryInMemory implements IUsersRepository {
