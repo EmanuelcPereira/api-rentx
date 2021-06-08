@@ -38,6 +38,12 @@ class CarsRepository implements ICarsRepository {
 
     return car;
   }
+
+  async findAvailable(): Promise<Car[]> {
+    const car = await this.ormRepository.find();
+
+    return car;
+  }
 }
 
 export { CarsRepository };
