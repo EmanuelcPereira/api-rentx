@@ -1,0 +1,43 @@
+import { ICreateCarDTO } from "@modules/cars/dtos/ICreateCarDTO";
+import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
+import { getRepository, Repository } from "typeorm";
+
+import { Car } from "../entities/Car";
+
+class CarsRepository implements ICarsRepository {
+  private ormRepository: Repository<Car>;
+
+  constructor() {
+    this.ormRepository = getRepository(Car);
+  }
+  async create({
+    name,
+    description,
+    daily_rate,
+    license_plate,
+    fine_amount,
+    brand,
+    category_id,
+  }: ICreateCarDTO): Promise<Car> {
+    const car = this.ormRepository.create({
+      name,
+      description,
+      daily_rate,
+      license_plate,
+      fine_amount,
+      brand,
+      category_id,
+    });
+
+    await this.ormRepository.save(car);
+
+    return car;
+  }
+  async findByLicensePlate(license_plate: string): Promise<Car> {
+    const car = await this.ormRepository.findOne({ license_plate });
+
+    return car;
+  }
+}
+
+export { CarsRepository };
