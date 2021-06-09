@@ -5,6 +5,8 @@ import {
   PrimaryGeneratedColumn,
 } from "typeorm";
 
+import { Car } from "./Car";
+
 @Entity("specifications")
 class Specification {
   @PrimaryGeneratedColumn("uuid")
@@ -18,12 +20,6 @@ class Specification {
 
   @CreateDateColumn()
   created_at: Date;
-
-  // constructor() {
-  //   if (!this.id) {
-  //     this.id = uuid();
-  //   }
-  // }
 }
 
 export { Specification };
