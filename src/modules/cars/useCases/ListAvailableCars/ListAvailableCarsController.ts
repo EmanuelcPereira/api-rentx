@@ -14,7 +14,6 @@ class ListAvailableCarsController {
       name: name as string,
       category_id: category_id as string,
     });
-    console.log(cars);
     return res.json(cars);
   }
 }
