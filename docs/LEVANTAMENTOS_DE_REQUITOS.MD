@@ -8,43 +8,40 @@
 # CADASTRO DE CARROS
 
 RF:
-- deve ser possivel cadastrar um carro
-- deve ser possivel listar todos os carros pela categorias.
-- deve ser possivel listar todos os carros disponiveis pela marca.
-- deve ser possivel listar todos os carros disponiveis pelo nome do carro.
+- [x] deve ser possivel cadastrar um carro
+
 
 RN:
-- Não deve ser possivel cadastrar dois carros usando uma placa já cadastrada.
-- não deve ser possivel alterar a placa de um carro já cadastrado.
-- o carro deve ser cadastrado com o available = true por padrão.
-- somente um admin poderá cadastrar um veículo.
+- [x] Não deve ser possivel cadastrar dois carros usando uma placa já cadastrada.
+- [x] o carro deve ser cadastrado com o available = true por padrão.
+- [x] somente um admin poderá cadastrar um veículo.
 
 
 # LISTAGEM DE CARROS
 
 RF:
-- deve ser possivel listar os carros que estão disponiveis.
+- [x] deve ser possivel listar os carros que estão disponiveis.
+- [x] deve ser possivel listar todos os carros pela categorias.
+- [x] deve ser possivel listar todos os carros disponiveis pela marca.
+- [x] deve ser possivel listar todos os carros disponiveis pelo nome do carro.
 
 RN:
-- O usuario não precisa estar logado no sistema para listar veiculos available.
+- [x] O usuario não precisa estar logado no sistema para listar veiculos available.
 
 # CADASTRO DE ESPEICIFICAÇÃO DOS CARROS
 
 RF:
-- deve ser possivel cadastrar uma especificação para um carro.
-- deve ser possivel listar todas as especificações.
-- deve ser possivel listar todos os carros
+- [x] deve ser possivel cadastrar uma especificação para um carro.
 
 RN:
-- não deve ser possivel cadastrar uma especificação para um carro não cadastrado.
-- não deve ser possivel cadastrar uma especificação já existente para o mesmo carro.
-- somente um admin poderá cadastrar especificações.
+- [x] não deve ser possivel cadastrar uma especificação para um carro não cadastrado.
+- [x] não deve ser possivel cadastrar uma especificação já existente para o mesmo carro.
+- [x] somente um admin poderá cadastrar especificações.
 
 # CADASTRO DE IMAGENS DO CARRO
 
 RF:
 - deve ser possivel cadastrar uma imagem do carro.
-- deve ser possivel listar todos os carros.
 
 RNF:
 - utilizar o multer para upload dos arquivos.
