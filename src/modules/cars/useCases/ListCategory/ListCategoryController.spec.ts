@@ -40,16 +40,6 @@ describe("List Category Controller", () => {
         Authorization: `Bearer ${token}`,
       });
 
-    await request(app)
-      .post("/categories")
-      .send({
-        name: "Category Supertest1",
-        description: "Category Description Supertest1",
-      })
-      .set({
-        Authorization: `Bearer ${token}`,
-      });
-
     const res = await request(app).get("/categories");
 
     expect(res.status).toBe(200);
