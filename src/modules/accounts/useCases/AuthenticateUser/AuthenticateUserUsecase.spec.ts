@@ -43,34 +43,27 @@ describe("Authenticate user", () => {
   });
 
   it("should not be able to authenticate with a non-existent user", async () => {
-    expect(async () => {
-      await createUserUseCase.execute({
-        name: "Fulano da silva",
-        email: "fulano@silva.com",
-        password: "123@mudar",
-        driver_license: "2345678",
-      });
-
-      await authenticateUserUseCase.execute({
+    await expect(
+      authenticateUserUseCase.execute({
         email: "non-existent-user",
         password: "123@mudar",
-      });
-    }).rejects.toBeInstanceOf(AppError);
+      })
+    ).rejects.toEqual(new AppError("Wrong email or password"));
   });
 
-  it("should not be able to authenticate with a non-existent user", async () => {
-    expect(async () => {
-      await createUserUseCase.execute({
-        name: "Fulano da silva",
-        email: "fulano@silva.com",
-        password: "123@mudar",
-        driver_license: "2345678",
-      });
+  it("should not be able to authenticate with wrong password", async () => {
+    await createUserUseCase.execute({
+      name: "Fulano da silva",
+      email: "fulano@silva.com",
+      password: "123@mudar",
+      driver_license: "2345678",
+    });
 
-      await authenticateUserUseCase.execute({
+    await expect(
+      authenticateUserUseCase.execute({
         email: "fulano@silva.com",
         password: "wrong-password",
-      });
-    }).rejects.toBeInstanceOf(AppError);
+      })
+    ).rejects.toEqual(new AppError("Wrong email or password"));
   });
 });
