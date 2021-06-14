@@ -28,7 +28,7 @@ describe("List Category Controller", () => {
       password: "admin",
     });
 
-    const { token } = responseToken.body;
+    const { refresh_token } = responseToken.body;
 
     await request(app)
       .post("/categories")
@@ -37,7 +37,7 @@ describe("List Category Controller", () => {
         description: "Category Description Supertest",
       })
       .set({
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${refresh_token}`,
       });
 
     const res = await request(app).get("/categories");
@@ -47,7 +47,7 @@ describe("List Category Controller", () => {
     expect(res.body[0]).toHaveProperty("id");
   });
 
-  afterAll(async () => {
+  afterEach(async () => {
     await connection.dropDatabase();
     await connection.close();
   });
