@@ -41,14 +41,14 @@ RN:
 # CADASTRO DE IMAGENS DO CARRO
 
 RF:
-- deve ser possivel cadastrar uma imagem do carro.
+- [x] deve ser possivel cadastrar imagens do carro.
 
 RNF:
-- utilizar o multer para upload dos arquivos.
+- [x] utilizar o multer para upload dos arquivos.
 
 RN:
-- o admin poderá cadastrar mais de uma imagem para o carro.
-- o responsavel pelo cadastro de imagem será o admin
+- [x] poderá cadastrar mais de uma imagem para o carro.
+- [x] o responsavel pelo cadastro de imagem será o admin
 
 # AGENDAMENTO DE LOCAÇÃO
 
@@ -56,6 +56,39 @@ RF:
 - deve ser possivel agendar uma locação
 
 RN:
-- o aluguel deve ter duração minima de 24 horas.
-- não deve ser possivel cadastrar um aluguel caso já exista um agendamento para o mesmo usuario.
-- não deve ser possivel cadastrar um aluguel caso já exista um agendamento para um carro.
+- [x] o aluguel deve ter duração minima de 24 horas.
+- [x] não deve ser possivel cadastrar um aluguel caso já exista um agendamento para o mesmo usuario.
+- [x] não deve ser possivel cadastrar um aluguel caso já exista um agendamento para um carro.
+- [x] Ao locar um carro, o status deverá ser alterado para não disponivel.
+
+# DEVOLUÇÃO DE CARRO
+
+RF:
+- [x] Deve ser possivel realizar a devolução de um carro.
+
+RN:
+- [x] Se o carro for devolvido com menos de 24 horas, deverá ser cobrado diária completa.
+- [x] Ao ser realizado a devolução, o carro deverá ser liberado para outro aluguel.
+- [x] Ao ser realizado a devolução, o usuário deverá ser liberado para locar novamente.
+- [x] Ao ser realizado a devolução, deverá ser calculado o total do aluguel.
+- [] Caso o horario de devolução seja superior ao previsto, deverá ser cobrado multa proporcional aos dias de atraso.
+- [] Caso haja multa, deverá ser somado ao total do aluguel.
+
+# LISTAGEM DE ALUGUEL PARA USUÁRIO
+
+RF:
+- [x] Deve ser possivel realizar a busca de todos os alugueis para o usuario.
+
+RN:
+- [x] O usuario deve estar logado na aplicação.
+
+# RECUPERAÇÃO DE SENHA
+
+RF:
+- [] Deve ser possível o usuário recuperar a senha informando o email
+- [] O usuário deve ser receber um email com o passo a passo para recuperação da senha
+- [] O usuário deve conseguir inserir uma nova senha
+
+RN:
+- [] O usuário precisa inserir uma nova senha
+- [] O link enviado para recuperação deve expirar em 3 horas
