@@ -1,10 +1,10 @@
 "use strict";
 
-var _UsersTokensRepositoryInMemory = require("@modules/accounts/repositories/In-Memory/UsersTokensRepositoryInMemory");
+var _UsersTokensRepositoryInMemory = require("../../repositories/In-Memory/UsersTokensRepositoryInMemory");
 
-var _DayjsDateProvider = require("@shared/container/providers/DateProvider/implementations/DayjsDateProvider");
+var _DayjsDateProvider = require("../../../../shared/container/providers/DateProvider/implementations/DayjsDateProvider");
 
-var _AppError = require("@shared/errors/AppError");
+var _AppError = require("../../../../shared/errors/AppError");
 
 var _UsersRepositoryInMemory = require("../../repositories/In-Memory/UsersRepositoryInMemory");
 

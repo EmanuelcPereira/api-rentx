@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.authenticationsRoutes = void 0;
 
-var _AuthenticateUserController = require("@modules/accounts/useCases/AuthenticateUser/AuthenticateUserController");
+var _AuthenticateUserController = require("../../../../modules/accounts/useCases/AuthenticateUser/AuthenticateUserController");
 
-var _RefreshTokenController = require("@modules/accounts/useCases/RefreshToken/RefreshTokenController");
+var _RefreshTokenController = require("../../../../modules/accounts/useCases/RefreshToken/RefreshTokenController");
 
 var _express = require("express");
 

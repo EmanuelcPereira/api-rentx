@@ -1,6 +1,6 @@
 "use strict";
 
-var _CarsRepositoryInMemory = require("@modules/cars/repositories/in-Memory/CarsRepositoryInMemory");
+var _CarsRepositoryInMemory = require("../../repositories/in-Memory/CarsRepositoryInMemory");
 
 var _CreateCarUseCase = require("../CreateCar/CreateCarUseCase");
 

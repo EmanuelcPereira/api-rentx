@@ -1,14 +1,14 @@
 "use strict";
 
-var _UsersRepositoryInMemory = require("@modules/accounts/repositories/In-Memory/UsersRepositoryInMemory");
+var _UsersRepositoryInMemory = require("../../repositories/In-Memory/UsersRepositoryInMemory");
 
-var _UsersTokensRepositoryInMemory = require("@modules/accounts/repositories/In-Memory/UsersTokensRepositoryInMemory");
+var _UsersTokensRepositoryInMemory = require("../../repositories/In-Memory/UsersTokensRepositoryInMemory");
 
-var _DayjsDateProvider = require("@shared/container/providers/DateProvider/implementations/DayjsDateProvider");
+var _DayjsDateProvider = require("../../../../shared/container/providers/DateProvider/implementations/DayjsDateProvider");
 
-var _MailProviderInMemory = require("@shared/container/providers/MailProvider/in-Memory/MailProviderInMemory");
+var _MailProviderInMemory = require("../../../../shared/container/providers/MailProvider/in-Memory/MailProviderInMemory");
 
-var _AppError = require("@shared/errors/AppError");
+var _AppError = require("../../../../shared/errors/AppError");
 
 var _SendForgotPasswordMailUseCase = require("./SendForgotPasswordMailUseCase");
 

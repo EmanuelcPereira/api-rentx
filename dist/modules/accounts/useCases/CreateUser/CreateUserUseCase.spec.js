@@ -1,6 +1,6 @@
 "use strict";
 
-var _AppError = require("@shared/errors/AppError");
+var _AppError = require("../../../../shared/errors/AppError");
 
 var _UsersRepositoryInMemory = require("../../repositories/In-Memory/UsersRepositoryInMemory");
 

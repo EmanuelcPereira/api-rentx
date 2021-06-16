@@ -9,7 +9,7 @@ var _bcrypt = require("bcrypt");
 
 var _tsyringe = require("tsyringe");
 
-var _AppError = require("@shared/errors/AppError");
+var _AppError = require("../../../../shared/errors/AppError");
 
 var _IUsersRepository = require("../../repositories/IUsersRepository");
 

@@ -1,24 +1,24 @@
 "use strict";
 
-require("@shared/container/providers/DateProvider");
+require("./providers/DateProvider");
 
-require("@shared/container/providers/MailProvider");
+require("./providers/MailProvider");
 
-require("@shared/container/providers/StorageProvider");
+require("./providers/StorageProvider");
 
-var _UsersRepository = require("@modules/accounts/infra/typeorm/repositories/UsersRepository");
+var _UsersRepository = require("../../modules/accounts/infra/typeorm/repositories/UsersRepository");
 
-var _UsersTokensRepository = require("@modules/accounts/infra/typeorm/repositories/UsersTokensRepository");
+var _UsersTokensRepository = require("../../modules/accounts/infra/typeorm/repositories/UsersTokensRepository");
 
-var _CarsImagesRepository = require("@modules/cars/infra/typeorm/repositories/CarsImagesRepository");
+var _CarsImagesRepository = require("../../modules/cars/infra/typeorm/repositories/CarsImagesRepository");
 
-var _CarsRepository = require("@modules/cars/infra/typeorm/repositories/CarsRepository");
+var _CarsRepository = require("../../modules/cars/infra/typeorm/repositories/CarsRepository");
 
-var _CategoriesRepository = require("@modules/cars/infra/typeorm/repositories/CategoriesRepository");
+var _CategoriesRepository = require("../../modules/cars/infra/typeorm/repositories/CategoriesRepository");
 
-var _SpecificationsRepository = require("@modules/cars/infra/typeorm/repositories/SpecificationsRepository");
+var _SpecificationsRepository = require("../../modules/cars/infra/typeorm/repositories/SpecificationsRepository");
 
-var _RentalsRepository = require("@modules/rentals/infra/typeorm/repositories/RentalsRepository");
+var _RentalsRepository = require("../../modules/rentals/infra/typeorm/repositories/RentalsRepository");
 
 var _tsyringe = require("tsyringe");
 

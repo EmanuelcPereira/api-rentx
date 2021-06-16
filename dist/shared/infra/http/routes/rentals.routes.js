@@ -5,15 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.rentalsRoutes = void 0;
 
-var _CreateRentalController = require("@modules/rentals/useCases/CreateRental/CreateRentalController");
+var _CreateRentalController = require("../../../../modules/rentals/useCases/CreateRental/CreateRentalController");
 
-var _DevolutionRentalController = require("@modules/rentals/useCases/devolutionRental/DevolutionRentalController");
+var _DevolutionRentalController = require("../../../../modules/rentals/useCases/devolutionRental/DevolutionRentalController");
 
-var _listRentalsByUserController = require("@modules/rentals/useCases/listRentalsByUser/listRentalsByUserController");
+var _listRentalsByUserController = require("../../../../modules/rentals/useCases/listRentalsByUser/listRentalsByUserController");
 
 var _express = require("express");
 
-var _ensureAuthenticated = require("@shared/infra/http/middlewares/ensureAuthenticated");
+var _ensureAuthenticated = require("../middlewares/ensureAuthenticated");
 
 const createRentalsController = new _CreateRentalController.CreateRentalController();
 const devolutionRentalController = new _DevolutionRentalController.DevolutionRentalController();

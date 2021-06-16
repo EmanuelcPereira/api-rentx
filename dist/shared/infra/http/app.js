@@ -9,7 +9,7 @@ require("reflect-metadata");
 
 require("dotenv/config");
 
-var _upload = _interopRequireDefault(require("@config/upload"));
+var _upload = _interopRequireDefault(require("../../../config/upload"));
 
 var _cors = _interopRequireDefault(require("cors"));
 
@@ -19,13 +19,13 @@ require("express-async-errors");
 
 var _swaggerUiExpress = _interopRequireDefault(require("swagger-ui-express"));
 
-var _AppError = require("@shared/errors/AppError");
+var _AppError = require("../../errors/AppError");
 
-var _routes = require("@shared/infra/http/routes");
+var _routes = require("./routes");
 
-var _typeorm = _interopRequireDefault(require("@shared/infra/typeorm"));
+var _typeorm = _interopRequireDefault(require("../typeorm"));
 
-require("@shared/container");
+require("../../container");
 
 var _swagger = _interopRequireDefault(require("../../../swagger.json"));
 

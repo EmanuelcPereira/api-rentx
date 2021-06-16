@@ -5,9 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.passwordRoutes = void 0;
 
-var _ResetPasswordUserController = require("@modules/accounts/useCases/ResetPasswordUser/ResetPasswordUserController");
+var _ResetPasswordUserController = require("../../../../modules/accounts/useCases/ResetPasswordUser/ResetPasswordUserController");
 
-var _SendForgotPasswordMailController = require("@modules/accounts/useCases/SendForgotPassworMail/SendForgotPasswordMailController");
+var _SendForgotPasswordMailController = require("../../../../modules/accounts/useCases/SendForgotPassworMail/SendForgotPasswordMailController");
 
 var _express = require("express");
 
